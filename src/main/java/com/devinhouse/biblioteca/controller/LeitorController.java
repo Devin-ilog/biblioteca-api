@@ -44,10 +44,10 @@ public class LeitorController {
         return ResponseEntity.created(URI.create(leitor.getCpf().toString())).body(resp);
     }
 
-//    @DeleteMapping("{cpf}")
-//    public ResponseEntity excluir(@PathVariable Long cpf) {
-//        leitorService.excluir(cpf);
-//        return ResponseEntity.noContent().build();
-//    }
+    @DeleteMapping("{cpf}")
+    public ResponseEntity excluir(@PathVariable Long cpf) {
+        leitorService.excluir(cpf);
+        return ResponseEntity.noContent().build();
+    }
 
 }
