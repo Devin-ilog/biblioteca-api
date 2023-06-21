@@ -1,5 +1,6 @@
 package com.devinhouse.biblioteca.controller;
 
+import com.devinhouse.biblioteca.dto.EmprestimoRequest;
 import com.devinhouse.biblioteca.dto.EmprestimoResponse;
 import com.devinhouse.biblioteca.model.Emprestimo;
 import com.devinhouse.biblioteca.model.Leitor;
@@ -43,14 +44,14 @@ public class EmprestimoController {
         return ResponseEntity.ok(resp);
     }
 
-//    @PostMapping
-//    public ResponseEntity<EmprestimoResponse> inserir(@RequestBody @Valid EmprestimoRequest request) {
-//        Emprestimo emprestimo = mapper.map(request, Emprestimo.class);
-//        emprestimo = emprestimoService.incluir(emprestimo);
-//        EmprestimoResponse resp = mapper.map(emprestimo, EmprestimoResponse.class);
-//        return ResponseEntity.created(URI.create(emprestimo.getId().toString())).body(resp);
-//    }
-//
+    @PostMapping
+    public ResponseEntity<EmprestimoResponse> inserir(@RequestBody @Valid EmprestimoRequest request) {
+        Emprestimo emprestimo = mapper.map(request, Emprestimo.class);
+        emprestimo = emprestimoService.incluir(emprestimo);
+        EmprestimoResponse resp = mapper.map(emprestimo, EmprestimoResponse.class);
+        return ResponseEntity.created(URI.create(emprestimo.getId().toString())).body(resp);
+    }
+
 //    @DeleteMapping("{id}")
 //    public ResponseEntity excluir(@PathVariable Integer id) {
 //        emprestimoService.excluir(id);
