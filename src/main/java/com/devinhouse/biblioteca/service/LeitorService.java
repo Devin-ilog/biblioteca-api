@@ -35,7 +35,7 @@ public class LeitorService {
 
     public void excluir(Long cpf) {
         Leitor leitor = this.consultar(cpf);
-        boolean possuiEmprestimosAtivos  = leitor.getQtdEmprestimos() > 0;
+        boolean possuiEmprestimosAtivos = leitor.getQtdEmprestimos() > 0;
         if (possuiEmprestimosAtivos)
             throw new LeitorComEmprestimosException();
         leitorRepo.deleteById(cpf);
