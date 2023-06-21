@@ -52,10 +52,10 @@ public class EmprestimoController {
         return ResponseEntity.created(URI.create(emprestimo.getId().toString())).body(resp);
     }
 
-//    @DeleteMapping("{id}")
-//    public ResponseEntity excluir(@PathVariable Integer id) {
-//        emprestimoService.excluir(id);
-//        return ResponseEntity.noContent().build();
-//    }
+    @DeleteMapping("{id}")
+    public ResponseEntity excluir(@PathVariable Integer id) {
+        emprestimoService.excluir(id);
+        return ResponseEntity.noContent().build();
+    }
 
 }
