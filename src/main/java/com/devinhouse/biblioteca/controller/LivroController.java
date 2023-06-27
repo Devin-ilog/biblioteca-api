@@ -16,7 +16,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/livros")
+@RequestMapping("/livros")
 @RequiredArgsConstructor
 @Slf4j
 public class LivroController {

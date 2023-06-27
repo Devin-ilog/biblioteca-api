@@ -20,7 +20,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/emprestimos")
+@RequestMapping("/emprestimos")
 @RequiredArgsConstructor
 @Slf4j
 public class EmprestimoController {

@@ -18,7 +18,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/leitores")
+@RequestMapping("/leitores")
 @RequiredArgsConstructor
 @Slf4j
 public class LeitorController {
